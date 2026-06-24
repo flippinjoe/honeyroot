@@ -47,14 +47,18 @@ Live status. Update as work completes. `✅ done · 🔵 in progress · ⬜ todo
 - [ ] ⬜ **Exit:** standard event booked + deposit paid into Square end-to-end
 
 ## Phase 3 — Inventory + Blog + Instagram
-- [ ] ⬜ Wix Stores mirror of online items only (gift cards/prepaid/merch)
-- [ ] ⬜ Reconciliation routine with Square (runbook 02 Part C)
-- [ ] ⬜ Notion Par Sheet for consumables + per-event prep method (runbook 05)
-- [ ] ⬜ Blog setup + categories + first posts (runbook 06)
-- [ ] ⬜ Instagram feed embed + static fallback (runbook 07)
+- [x] ✅ Par sheet template + per-event prep formula (`content/inventory/`)
+- [x] ✅ Blog content calendar + topic bank (`content/blog/content-calendar.md`)
+- [ ] 👤 Import par sheet to Notion + populate real values (runbook 05)
+- [ ] 👤 Wix Stores mirror of online items only (gift cards/prepaid/merch)
+- [ ] 👤 Reconciliation routine with Square (runbook 02 Part C)
+- [ ] 👤 Blog setup + categories + first posts (runbook 06)
+- [ ] 👤 Instagram feed embed + static fallback (runbook 07)
 - [ ] ⬜ **Exit:** blog + IG live; online catalog reconciled; par sheet in use
 
 ## Phase 4 — Polish / SEO / Launch
+- [x] ✅ Per-page SEO titles + meta drafted (`content/seo.md`)
+- [x] ✅ Launch / QA checklist (`docs/launch-checklist.md`)
 - [ ] ⬜ Full mobile QA (all pages + both booking paths)
 - [ ] ⬜ Visual cleanliness pass
 - [ ] ⬜ SEO (titles/meta/slugs/alt/sitemap/structured data) + analytics

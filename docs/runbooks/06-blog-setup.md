@@ -26,7 +26,7 @@ Create a small set of categories (`TODO(owner)` refine):
 
 ## 5. Cadence
 - Define a realistic publishing cadence (`TODO(owner)`, e.g. 1–2/month). Maintain a content
-  calendar in **Notion**.
+  calendar in **Notion**, seeded from [`content/blog/content-calendar.md`](../../content/blog/content-calendar.md).
 
 ## ✅ Verify it worked
 - /blog lists posts, reads cleanly on mobile, and isn't cluttering the top nav.

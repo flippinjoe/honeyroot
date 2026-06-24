@@ -11,6 +11,7 @@ Coffee Co. site. Config-and-runbooks live here; custom code lives in [`/velo`](.
 | [`service-to-page-mapping.md`](service-to-page-mapping.md) | Each of the 9 services → its page/section + how it's expressed. |
 | [`booking-paths.md`](booking-paths.md) | The two booking paths (self-serve vs. quote) and the data each captures. |
 | [`architecture.md`](architecture.md) | The Wix ⇄ Square stack: money flow, data flow, what syncs where. |
+| [`launch-checklist.md`](launch-checklist.md) | Phase 4 pre-launch QA (content, mobile, payments, SEO, a11y, go-live). |
 
 ## Runbooks (`runbooks/`)
 

@@ -1,0 +1,13 @@
+item,category,unit,par_level,on_hand,reorder_point,supplier,per_drink_usage,notes
+Espresso beans,Coffee,lb,TODO,TODO,TODO,TODO(owner),~0.4 oz/drink,EXAMPLE row — confirm dose & par
+Whole milk,Milk,half-gallon,TODO,TODO,TODO,TODO(owner),~5 oz/milk-drink,EXAMPLE row
+Oat milk,Alt-milk,half-gallon,TODO,TODO,TODO,TODO(owner),~5 oz/alt-milk-drink,EXAMPLE row
+Almond milk,Alt-milk,half-gallon,TODO,TODO,TODO,TODO(owner),~5 oz/alt-milk-drink,EXAMPLE row
+12oz hot cups,Supplies,case,TODO,TODO,TODO,TODO(owner),1/hot drink,EXAMPLE row
+16oz cold cups,Supplies,case,TODO,TODO,TODO,TODO(owner),1/iced drink,EXAMPLE row
+Cup lids,Supplies,case,TODO,TODO,TODO,TODO(owner),1/drink,EXAMPLE row
+Vanilla syrup,Syrup,750ml,TODO,TODO,TODO,TODO(owner),~0.5 oz/flavored drink,EXAMPLE row
+Chocolate sauce,Syrup,bottle,TODO,TODO,TODO,TODO(owner),~0.75 oz/mocha,EXAMPLE row
+Matcha,Tea,can,TODO,TODO,TODO,TODO(owner),~1 scoop/matcha,EXAMPLE row
+Chai concentrate,Tea,carton,TODO,TODO,TODO,TODO(owner),~4 oz/chai,EXAMPLE row
+Napkins,Supplies,pack,TODO,TODO,TODO,TODO(owner),~2/guest,EXAMPLE row

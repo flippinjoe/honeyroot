@@ -28,7 +28,8 @@ Not sold online, not really retail SKUs. This is the part neither tool does well
   it's flexible and the owner already has Notion in the stack).
 - The **Notion Par Sheet** tracks, per consumable: unit, par level, on-hand, reorder point,
   supplier, and a per-event burn estimate (cups/drinks → units). Restock decisions are made from
-  this sheet, not from Wix.
+  this sheet, not from Wix. **Start from the importable template + prep formula in
+  [`content/inventory/`](../../content/inventory/)** (`par-sheet.csv` + README).
 - Before each event, generate a **prep list** from guest count × drinks-per-guest assumptions
   (`TODO(owner)` set the ratios). After the event, update on-hand.
 
