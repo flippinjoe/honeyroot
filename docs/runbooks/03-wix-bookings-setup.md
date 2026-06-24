@@ -12,14 +12,19 @@ event package and pay a deposit via Square.
    e.g. minimum 7–14 days out).
 
 ## 2. Create services = packages
-Create one Bookings **service** per standard package. Suggested starting set (`TODO(owner)` for
-real names, durations, caps, prices):
+Create one Bookings **service** per standard package. Definitions live in
+[`content/packages/packages.json`](../../content/packages/packages.json) — that file is the source
+of truth for names, durations, guest caps, inclusions, and add-ons (prices are `TODO(owner)`).
+Enter the prices/deposits in Wix Bookings as you create each service.
 
 | Service (package) | Duration | Guest cap | Deposit | Price |
 | --- | --- | --- | --- | --- |
-| Petite Bar | 2 hr | ~50 | `TODO` | `TODO` |
-| Signature Bar | 3 hr | ~75 | `TODO` | `TODO` |
-| Grand Bar | 4 hr | ~100 | `TODO` | `TODO` |
+| Petite Bar | 2 hr | 50 | `TODO(owner)` | `TODO(owner)` |
+| Signature Bar | 3 hr | 100 | `TODO(owner)` | `TODO(owner)` |
+| Grand Bar | 4 hr | 150 | `TODO(owner)` | `TODO(owner)` |
+
+> If you change a guest cap, also update `velo/public/packages.js` so the booking-page helper
+> routes correctly.
 
 For each service set:
 - **Type:** appointment/class as appropriate (usually a single-session "appointment").
@@ -33,9 +38,17 @@ For each service set:
 Model add-ons (extra hour, alt-milk pack, basic branding) as either service variants or
 booking-form options. `TODO(owner)` finalize.
 
-## 4. Place the booking widget
+## 4. Place the booking widget + helper
 1. On the **/book** page, add the Wix Bookings widget (service list / calendar).
-2. Add an **escape hatch** banner: "Larger or custom event? **Request a quote →** /quote".
+2. *(Optional, recommended)* Above the widget, add the **"which package?" helper**: a number input
+   `#guestCountHelper`, a `#recommendBtn` button, a hidden `#recommendResult` text, and a hidden
+   `#quoteCallout` container linking to /quote. Paste
+   [`velo/pages/book.page.js`](../../velo/pages/book.page.js) (uses
+   [`velo/public/packages.js`](../../velo/public/packages.js)) into the page's code file. The helper
+   recommends a package by guest count and routes oversized events to the quote.
+3. Add an **escape hatch** banner: "Larger or custom event? **Request a quote →** /quote".
+4. Set the Bookings **Thank-You page** copy from
+   [`content/pages/confirmation.md`](../../content/pages/confirmation.md).
 
 ## 5. Confirmation & notifications
 1. Enable automated **booking confirmation email** to the client (ties into

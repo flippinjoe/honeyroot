@@ -34,12 +34,16 @@ Live status. Update as work completes. `✅ done · 🔵 in progress · ⬜ todo
 - [ ] ⬜ **Exit:** quote lead reaches owner end-to-end on mobile
 
 ## Phase 2 — Booking + Invoicing
-- [ ] ⬜ Wix Bookings packages (runbook 03) — names/caps/prices from owner
-- [ ] ⬜ Deposit via Square at booking
-- [ ] ⬜ /book page + escape hatch to /quote
-- [ ] ⬜ Automated receipts + branded invoice template (runbook 04)
-- [ ] ⬜ Quote → invoice → deposit (Square) flow
-- [ ] ⬜ Confirmation / thank-you pages (both paths)
+- [x] ✅ Package definitions as data (`content/packages/packages.json`) — prices `TODO(owner)`
+- [x] ✅ Book page + confirmation copy (`content/pages/book.md`, `confirmation.md`, status: review)
+- [x] ✅ Booking-page guest-count helper (`velo/public/packages.js`, `pages/book.page.js`)
+- [x] ✅ Runbook 03 updated (packages source, helper wiring, thank-you page)
+- [ ] 👤 Create Wix Bookings services from packages.json + enter prices/deposits (runbook 03)
+- [ ] 👤 Enable deposit via Square at booking (runbooks 02 + 03)
+- [ ] 👤 Build /book page (widget + helper + escape hatch) + escape hatch to /quote
+- [ ] 👤 Automated receipts + branded invoice template (runbook 04)
+- [ ] 👤 Quote → invoice → deposit (Square) flow (runbook 04)
+- [ ] ⬜ Confirmation / thank-you pages wired (both paths)
 - [ ] ⬜ **Exit:** standard event booked + deposit paid into Square end-to-end
 
 ## Phase 3 — Inventory + Blog + Instagram

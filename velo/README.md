@@ -26,9 +26,11 @@ velo/
 ├── backend/      ← *.jsw (web modules) and *.js backend logic, secrets via Wix Secrets Manager
 │   └── quoteRequests.jsw   submitQuoteRequest(): validate → insert QuoteRequests → return result
 ├── public/       ← shared client-side modules
-│   └── validation.js       validateQuotePayload() shared by client + backend
+│   ├── validation.js       validateQuotePayload() shared by client + backend
+│   └── packages.js         booking packages + recommendPackage() (guest-count routing)
 └── pages/        ← per-page client code (bind to Wix element IDs)
-    └── quote.page.js       wires the /quote form elements to the backend
+    ├── quote.page.js       wires the /quote form elements to the backend
+    └── book.page.js        /book "which package?" helper → recommend or route to /quote
 ```
 
 ## `QuoteRequests` collection schema

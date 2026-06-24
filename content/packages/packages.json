@@ -1,0 +1,47 @@
+{
+  "$comment": "Canonical definition of the standard self-serve booking packages (Path A). Source of truth for the Wix Bookings services (runbook 03) and the Book page copy. Pricing/deposit are TODO(owner). Guest caps drive the booking-page routing helper (velo/public/packages.js) — keep the two in sync. Events above the largest cap route to the custom quote (Path B).",
+  "currency": "USD",
+  "packages": [
+    {
+      "id": "petite",
+      "name": "Petite Bar",
+      "durationHours": 2,
+      "guestMax": 50,
+      "deposit": "TODO(owner)",
+      "price": "TODO(owner)",
+      "blurb": "An intimate espresso bar for smaller gatherings.",
+      "includes": ["1 professional barista", "espresso classics (hot & iced)", "whole/2% + oat/almond milk", "cups & supplies", "setup & breakdown"]
+    },
+    {
+      "id": "signature",
+      "name": "Signature Bar",
+      "durationHours": 3,
+      "guestMax": 100,
+      "deposit": "TODO(owner)",
+      "price": "TODO(owner)",
+      "blurb": "Our most popular package for weddings and corporate events.",
+      "includes": ["1–2 baristas", "full menu (hot & iced)", "whole/2% + oat/almond milk", "cups & supplies", "setup & breakdown"]
+    },
+    {
+      "id": "grand",
+      "name": "Grand Bar",
+      "durationHours": 4,
+      "guestMax": 150,
+      "deposit": "TODO(owner)",
+      "price": "TODO(owner)",
+      "blurb": "A full-service bar for larger celebrations.",
+      "includes": ["2 baristas", "full menu (hot & iced)", "whole/2% + oat/almond milk", "cups & supplies", "setup & breakdown"]
+    }
+  ],
+  "addOns": [
+    { "id": "extra-hour", "name": "Additional hour", "price": "TODO(owner)" },
+    { "id": "second-bar", "name": "Second bar / additional barista", "price": "TODO(owner)" },
+    { "id": "signature-menu", "name": "Custom / signature drink menu", "price": "TODO(owner)" },
+    { "id": "branding", "name": "Personalized event branding (cups, signage, branded bar)", "price": "TODO(owner)" },
+    { "id": "specialty-milk", "name": "Specialty alt-milks", "price": "TODO(owner)" }
+  ],
+  "routing": {
+    "$note": "Above the largest guestMax, or for multi-bar / heavy customization / out-of-area, send to the custom quote.",
+    "quoteAboveGuests": 150
+  }
+}
