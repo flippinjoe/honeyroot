@@ -3,6 +3,9 @@
 Platform setup runbooks, information architecture, and design decisions for the Honey Root
 Coffee Co. site. Config-and-runbooks live here; custom code lives in [`/velo`](../velo).
 
+> **New here / the owner?** Start with [`owner-handoff.md`](owner-handoff.md) — the order of
+> operations across everything below.
+
 ## Design & architecture
 
 | Doc | What it covers |

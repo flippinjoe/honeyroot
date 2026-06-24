@@ -54,6 +54,9 @@ honeyroot/
 
 ## Where to start
 
+**Owner / non-engineer? → [`docs/owner-handoff.md`](docs/owner-handoff.md)** is your start-here:
+what's done, what facts to gather, and the exact order to follow the runbooks.
+
 1. **Read the plan** → [`plan/phased-plan.md`](plan/phased-plan.md) and [`plan/checklist.md`](plan/checklist.md)
 2. **Understand the site** → [`docs/site-map.md`](docs/site-map.md)
 3. **Understand the money + data flow** → [`docs/architecture.md`](docs/architecture.md)
