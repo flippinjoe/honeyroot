@@ -1,37 +1,79 @@
 /*
- * quoteRequests.jsw — Path B (Custom Quote) backend web module   [SCAFFOLD / STUB]
- *
- * STATUS: Not implemented. Structural stub only — finalize after IA + plan review.
+ * quoteRequests.jsw — Path B (Custom Quote) backend web module
  *
  * Page:        /quote
- * Collection:  QuoteRequests (create in Wix Content Manager; schema in TODO below)
- * Secrets:     owner notification target via Wix Secrets Manager (no secrets in repo)
- * Related:     docs/booking-paths.md (field list), docs/architecture.md (Notion mirror)
+ * Collection:  QuoteRequests  (schema in velo/README.md)
+ * Related:     docs/booking-paths.md (field contract)
+ *              docs/runbooks/08-quote-form.md (collection + form wiring + owner-email Automation)
  *
- * Responsibilities (to build):
- *   1. Validate the submitted quote payload (server-side; mirror public/validation.js).
- *   2. Insert into the QuoteRequests collection.
- *   3. Notify the owner (Wix Automations/Triggered Email, or email via backend).
- *   4. (Optional) Mirror the request into Notion / place a calendar hold.
- *   5. Return a result the page can turn into a clean "thanks, we'll reply in X hrs" state.
+ * Flow: validate (server-side, authoritative) → insert into QuoteRequests → return result.
+ * Owner notification is handled by a Wix Automation that fires on each new QuoteRequests
+ * item (config over code — see runbook 08), NOT by this module. No payment is taken here;
+ * the deposit is collected later via a Wix Invoice → Square.
  *
- * NO payment is taken here. Deposit is collected later via Wix Invoice → Square.
+ * NOTE: written to stable Velo `wix-data` conventions. Before pasting into the live site,
+ * validate the current API via the Wix MCP (mcp.wix.com) per the `velo-code` skill.
  */
 
-// import wixData from 'wix-data';
+import wixData from 'wix-data';
+import { validateQuotePayload } from 'public/validation.js';
+
+const COLLECTION = 'QuoteRequests';
 
 /**
- * TODO(velo): QuoteRequest payload shape (keep in sync with docs/booking-paths.md → Path B):
- *   eventType, eventDates, dateFlexible, venueLocation, guestCount, duration,
- *   drinkPreferences[], milkOptions[], customMenuNotes, branding[], setupConstraints,
- *   budgetRange, referralSource, contact:{name,email,phone,company}, consent
+ * Submit a quote request from the /quote page.
+ * @param {Object} payload  Path B fields (see docs/booking-paths.md)
+ * @returns {Promise<{ok: boolean, id?: string, errors?: Object<string,string>}>}
  */
-
 export async function submitQuoteRequest(payload) {
-  // TODO(velo): validate(payload)
-  // TODO(velo): const saved = await wixData.insert('QuoteRequests', payload);
-  // TODO(velo): await notifyOwner(saved);
-  // TODO(velo): optional: await mirrorToNotion(saved);
-  // return { ok: true, id: saved._id };
-  throw new Error('quoteRequests.submitQuoteRequest not implemented — scaffold only');
+  const { valid, errors } = validateQuotePayload(payload);
+  if (!valid) {
+    return { ok: false, errors };
+  }
+
+  const record = sanitize(payload);
+  record.status = 'new';
+  record.submittedAt = new Date();
+
+  try {
+    const inserted = await wixData.insert(COLLECTION, record);
+    return { ok: true, id: inserted._id };
+  } catch (err) {
+    console.error('submitQuoteRequest insert failed:', err);
+    return { ok: false, errors: { _form: 'Something went wrong submitting your request. Please try again, or email us directly.' } };
+  }
+}
+
+/** Coerce/trim the raw client payload into the collection's field shape. */
+function sanitize(p) {
+  const contact = p.contact || {};
+  return {
+    eventType: trim(p.eventType),
+    eventDates: trim(p.eventDates),
+    dateFlexible: !!p.dateFlexible,
+    venueLocation: trim(p.venueLocation),
+    guestCount: Number(p.guestCount) || null,
+    duration: trim(p.duration),
+    drinkPreferences: toArray(p.drinkPreferences),
+    milkOptions: toArray(p.milkOptions),
+    customMenuNotes: trim(p.customMenuNotes),
+    branding: toArray(p.branding),
+    setupConstraints: trim(p.setupConstraints),
+    budgetRange: trim(p.budgetRange),
+    referralSource: trim(p.referralSource),
+    contactName: trim(contact.name),
+    contactEmail: trim(contact.email),
+    contactPhone: trim(contact.phone),
+    company: trim(contact.company),
+    consent: p.consent === true
+  };
+}
+
+function trim(v) {
+  return typeof v === 'string' ? v.trim() : '';
+}
+
+function toArray(v) {
+  if (Array.isArray(v)) return v;
+  return v ? [v] : [];
 }

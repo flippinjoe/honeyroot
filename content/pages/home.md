@@ -1,36 +1,46 @@
 ---
 page: Home
 route: /
-status: draft
+status: review
 last_reviewed: 2026-06-24
 primary_cta: [book, quote]
 ---
 
-# Home — copy outline
+# Home
 
-> Voice: warm, hospitable, confident. Mobile-first. End on a CTA.
+> Voice: warm, hospitable, confident. Mobile-first. Ends on a CTA.
+> Business facts still pending the owner are marked `TODO(owner)`.
 
 ## Hero
-- **Headline:** TODO(copy) — one line, e.g. "A mobile espresso bar for unforgettable events."
-- **Subhead:** TODO(copy) — what + who it's for (weddings, corporate, private).
-- **CTAs:** `Book an event` (Path A) · `Request a quote` (Path B)
-- **Image:** hero shot of the bar at an event — see `/assets`.
+**Headline:** Espresso, beautifully served — wherever you celebrate.
 
-## What we do (3–4 tiles)
-- Mobile espresso bar · Professional baristas · Custom menus · Elevated guest experience
-- TODO(copy): one short line each, sourced from `content/services/services.json`.
+**Subhead:** Honey Root Coffee Co. brings a full mobile espresso bar and professional baristas to
+weddings, corporate events, and private parties. Handcrafted drinks, elevated hospitality, and a
+setup that runs itself — so you can enjoy your event.
 
-## How it works (3 steps)
-1. Tell us about your event
-2. We craft the menu & quote
-3. We arrive, set up, and pour — then break down
-- TODO(copy)
+**Primary CTAs:** `Book an event` · `Request a quote`
 
-## Social proof
-- TODO(owner): testimonials / client logos / event-type chips.
+*Hero image:* the bar set up at a real event — see `/assets`. `TODO(owner)` final photo.
 
-## Instagram strip
-- @honeyrootcoffeeco latest posts (Phase 3 — see runbook 07).
+## What we bring
+- **A mobile espresso bar.** A beautiful, fully-equipped bar that comes to your venue.
+- **Professional baristas.** Skilled, friendly, and dialed in on every drink.
+- **Custom drink menus.** Espresso classics plus signatures designed around your event.
+- **Setup & breakdown.** We handle the logistics from load-in to load-out.
 
-## Closing CTA band
-- TODO(copy): "Ready to elevate your event?" → Book / Request a quote.
+## How it works
+1. **Tell us about your event.** Share the date, place, and headcount — book instantly or request a quote.
+2. **We craft your menu & quote.** Hot, iced, alt-milk, and any custom or branded touches.
+3. **We show up and pour.** Full setup, expert service, clean breakdown. You just enjoy it.
+
+## Trusted for
+Weddings · corporate gatherings · private parties · brand activations.
+
+> `TODO(owner)`: testimonials / client logos to add as social proof.
+
+## Follow along
+Latest from **@honeyrootcoffeeco** — *Instagram strip, Phase 3 (see runbook 07).*
+
+## Closing CTA
+**Ready to elevate your event?** `Book an event` for standard packages, or `Request a quote` for
+something larger or custom.

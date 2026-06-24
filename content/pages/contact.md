@@ -1,27 +1,35 @@
 ---
 page: Contact
 route: /contact
-status: draft
+status: review
 last_reviewed: 2026-06-24
 primary_cta: [quote, book]
 ---
 
-# Contact — copy outline
+# Contact
 
 ## Intro
-- TODO(copy): nudge toward Book / Quote over open-ended email where possible.
+The fastest way to get a date on the calendar is to `Book an event` (standard packages) or
+`Request a quote` (larger or custom events). Prefer to reach us directly? Use the details below.
 
-## Contact methods
-- Email: TODO(owner) · Phone: TODO(owner) · Service area: TODO(owner)
+## Reach us
+- **Email:** `TODO(owner)`
+- **Phone:** `TODO(owner)`
+- **Service area:** `TODO(owner)` and surrounding area
+- **Instagram:** [@honeyrootcoffeeco](https://www.instagram.com/honeyrootcoffeeco/)
 
-## Booking lead-time
-- TODO(owner): minimum notice for bookings.
+## Booking lead time
+We book up — especially in peak season. We recommend reaching out at least `TODO(owner)` in advance.
 
-## FAQ (accordion)
-- Deposits & cancellation policy — TODO(owner)
-- Travel / service radius — TODO(owner)
-- Power & water needs at the venue — TODO(copy)
-- Guest count limits / when to choose Quote vs Book — TODO(copy)
+## FAQ
+- **How far in advance should I book?** `TODO(owner)` — and earlier for peak dates.
+- **Do you travel? What's the service area?** Yes — we serve `TODO(owner)` and beyond; travel
+  outside that area is available, just ask.
+- **What do you need at the venue?** A level spot for the bar and, ideally, access to power/water.
+  Tell us your setup and we'll confirm what's needed. `TODO(owner)`: exact power/water requirements.
+- **What's the deposit / cancellation policy?** `TODO(owner)`: deposit %, due dates, cancellation terms.
+- **Should I book or request a quote?** Standard, smaller events fit our packages — just `Book`.
+  Large, multi-bar, custom-menu, or branded events → `Request a quote`.
 
 ## CTA
-- TODO(copy): Book / Request a quote.
+`Book an event` · `Request a quote`

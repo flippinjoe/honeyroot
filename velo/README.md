@@ -3,9 +3,10 @@
 Version-controlled **Velo by Wix** (JavaScript) for the genuine gaps that the Wix editor can't
 cover. **Everything else is configuration — see [`/docs/runbooks`](../docs/runbooks).**
 
-> 🛑 **Status: scaffold only.** Per the project gate, real Velo logic is **not** written until the
-> IA + plan are reviewed. The files here are structural stubs showing intent, bindings, and
-> contracts — not finished implementations. Don't paste stubs into the live site as-is.
+> ✅ **Status: Phase 1 implemented (in-repo).** The quote flow below is written and ready to paste
+> into Wix once the `/quote` form is built in the editor and the `QuoteRequests` collection exists
+> (see [runbook 08](../docs/runbooks/08-quote-form.md)). Validate against the **Wix MCP** before
+> pasting — APIs evolve. Element IDs in `quote.page.js` are the contract the editor form must match.
 
 ## What belongs here
 
@@ -23,12 +24,42 @@ cover. **Everything else is configuration — see [`/docs/runbooks`](../docs/run
 ```
 velo/
 ├── backend/      ← *.jsw (web modules) and *.js backend logic, secrets via Wix Secrets Manager
-│   └── quoteRequests.jsw   (STUB) submit/store/notify for the quote form
+│   └── quoteRequests.jsw   submitQuoteRequest(): validate → insert QuoteRequests → return result
 ├── public/       ← shared client-side modules
-│   └── validation.js       (STUB) shared form validation helpers
+│   └── validation.js       validateQuotePayload() shared by client + backend
 └── pages/        ← per-page client code (bind to Wix element IDs)
-    └── quote.page.js       (STUB) wires the /quote form elements to the backend
+    └── quote.page.js       wires the /quote form elements to the backend
 ```
+
+## `QuoteRequests` collection schema
+
+Create this in the Wix **Content Manager** (runbook 08). Field keys must match
+`sanitize()` in `backend/quoteRequests.jsw`. Permissions: form submits via the backend module,
+so the collection can be **admin-read / no public read**; the backend insert runs with elevated
+context. (Owner email is sent by a Wix Automation on new items — config, not code.)
+
+| Field key | Type | Notes |
+| --- | --- | --- |
+| `eventType` | Text | wedding / corporate / private / activation / other |
+| `eventDates` | Text | free text or date range |
+| `dateFlexible` | Boolean | |
+| `venueLocation` | Text | city + ZIP / venue |
+| `guestCount` | Number | primary cost driver |
+| `duration` | Text | desired service window |
+| `drinkPreferences` | Tags/Text (array) | hot, iced, classics, signature |
+| `milkOptions` | Tags/Text (array) | whole, oat, almond, … |
+| `customMenuNotes` | Text | |
+| `branding` | Tags/Text (array) | cups, signage, branded bar |
+| `setupConstraints` | Text | indoor/outdoor, power, water, access |
+| `budgetRange` | Text | optional, qualifies the lead |
+| `referralSource` | Text | attribution |
+| `contactName` | Text | required |
+| `contactEmail` | Text | required, validated |
+| `contactPhone` | Text | |
+| `company` | Text | |
+| `consent` | Boolean | required true |
+| `status` | Text | set to `new` on insert; owner updates (quoted/won/lost) |
+| `submittedAt` | Date and Time | set on insert |
 
 ## Conventions
 

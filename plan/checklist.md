@@ -21,13 +21,16 @@ Live status. Update as work completes. `✅ done · 🔵 in progress · ⬜ todo
 - [ ] ⬜ Notion project tracker + content calendar
 
 ## Phase 1 — Brochure + Quote
-- [ ] ⬜ Build pages: Home, Services, Menus, About, Contact, Gallery (static), Quote
-- [ ] ⬜ Finalize Phase-1 copy (`content/pages/*`)
-- [ ] ⬜ Finalize menu data (`content/menus/drink-menu.json`) + service data
-- [ ] ⬜ Create `QuoteRequests` collection (Wix Content Manager)
-- [ ] ⬜ Implement Velo quote-form handler (`velo/backend/quoteRequests.jsw`)
-- [ ] ⬜ Owner notification on new quote request
-- [ ] ⬜ Mobile-first layout + cleanliness pass
+- [x] ✅ Draft Phase-1 copy (`content/pages/*`, status: review) — owner facts marked `TODO(owner)`
+- [x] ✅ Drink-menu data classics + service data filled (`content/menus`, `content/services`)
+- [x] ✅ Implement Velo quote flow (`velo/public/validation.js`, `backend/quoteRequests.jsw`, `pages/quote.page.js`)
+- [x] ✅ Document `QuoteRequests` schema (`velo/README.md`)
+- [x] ✅ Quote-form wiring + owner-email Automation runbook (`docs/runbooks/08-quote-form.md`)
+- [ ] 👤 Provide owner facts to finalize copy (prices, radius, lead-time, deposit policy, team, signatures, contact) — see session notes
+- [ ] 👤 Build pages in Wix editor: Home, Services, Menus, About, Contact, Gallery (static), Quote
+- [ ] 👤 Create `QuoteRequests` collection + paste Velo + wire form IDs (runbook 08)
+- [ ] 👤 Owner-notification Automation on new quote request (runbook 08)
+- [ ] ⬜ Mobile-first layout + cleanliness pass (`brand-check`)
 - [ ] ⬜ **Exit:** quote lead reaches owner end-to-end on mobile
 
 ## Phase 2 — Booking + Invoicing

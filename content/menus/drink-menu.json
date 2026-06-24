@@ -1,5 +1,5 @@
 {
-  "$comment": "Structured drink menu that drives the Menus page (services 3,4,5,6). Prices optional — many events are package-priced; per-drink price only if relevant. TODO(owner) to confirm real offerings.",
+  "$comment": "Structured drink menu that drives the Menus page (services 3,4,5,6). Standard-classic descriptions are generic and accurate; signature/seasonal items and the full milk list stay TODO(owner). Prices are usually package-based, so per-drink price is omitted unless relevant.",
   "schema": {
     "category": "string — display group, e.g. 'Espresso Classics'",
     "items[].name": "string",
@@ -12,27 +12,27 @@
     {
       "category": "Espresso Classics",
       "items": [
-        { "name": "Latte", "description": "TODO(copy)", "temps": ["hot", "iced"], "tags": [] },
-        { "name": "Cappuccino", "description": "TODO(copy)", "temps": ["hot"], "tags": [] },
-        { "name": "Americano", "description": "TODO(copy)", "temps": ["hot", "iced"], "tags": [] },
-        { "name": "Mocha", "description": "TODO(copy)", "temps": ["hot", "iced"], "tags": [] },
-        { "name": "Cortado", "description": "TODO(copy)", "temps": ["hot"], "tags": [] }
+        { "name": "Latte", "description": "Espresso with steamed milk and a light layer of foam.", "temps": ["hot", "iced"], "tags": [] },
+        { "name": "Cappuccino", "description": "Espresso with equal parts steamed milk and airy foam.", "temps": ["hot"], "tags": [] },
+        { "name": "Americano", "description": "Espresso lengthened with hot water — smooth and bold.", "temps": ["hot", "iced"], "tags": [] },
+        { "name": "Mocha", "description": "Espresso, steamed milk, and rich chocolate.", "temps": ["hot", "iced"], "tags": [] },
+        { "name": "Cortado", "description": "Espresso cut with a small amount of warm milk.", "temps": ["hot"], "tags": [] }
       ]
     },
     {
       "category": "Signature & Seasonal",
       "items": [
-        { "name": "Honey Root Signature", "description": "TODO(copy): a house signature drink", "temps": ["hot", "iced"], "tags": ["signature"] },
-        { "name": "TODO(owner): seasonal drink", "description": "TODO(copy)", "temps": ["iced"], "tags": ["seasonal"] }
+        { "name": "TODO(owner): house signature drink", "description": "TODO(copy)", "temps": ["hot", "iced"], "tags": ["signature"] },
+        { "name": "TODO(owner): seasonal special", "description": "TODO(copy)", "temps": ["iced"], "tags": ["seasonal"] }
       ]
     },
     {
       "category": "Non-Espresso & Caffeine-Free",
       "items": [
-        { "name": "Hot Chocolate", "description": "TODO(copy)", "temps": ["hot"], "tags": ["caffeine-free"] },
-        { "name": "Chai Latte", "description": "TODO(copy)", "temps": ["hot", "iced"], "tags": [] },
-        { "name": "Matcha Latte", "description": "TODO(copy)", "temps": ["hot", "iced"], "tags": [] },
-        { "name": "Tea", "description": "TODO(copy)", "temps": ["hot"], "tags": ["caffeine-free"] }
+        { "name": "Hot Chocolate", "description": "Steamed milk and rich chocolate.", "temps": ["hot"], "tags": ["caffeine-free"] },
+        { "name": "Chai Latte", "description": "Spiced chai with steamed milk.", "temps": ["hot", "iced"], "tags": [] },
+        { "name": "Matcha Latte", "description": "Stone-ground green tea with steamed milk.", "temps": ["hot", "iced"], "tags": [] },
+        { "name": "Tea", "description": "A selection of hot teas.", "temps": ["hot"], "tags": ["caffeine-free"] }
       ]
     }
   ]

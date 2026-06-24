@@ -25,6 +25,7 @@ Step-by-step, dashboard-oriented guides written for the owner.
 | [`05-inventory-approach.md`](runbooks/05-inventory-approach.md) | 3 |
 | [`06-blog-setup.md`](runbooks/06-blog-setup.md) | 3 |
 | [`07-instagram-feed.md`](runbooks/07-instagram-feed.md) | 3 |
+| [`08-quote-form.md`](runbooks/08-quote-form.md) | 1 |
 
 > Runbooks contain `TODO(owner)` markers wherever a real business fact (price, radius, account
 > ID, package detail) is required. Fill those in during setup — don't guess them.

@@ -1,24 +1,30 @@
 ---
 page: Request a Quote
 route: /quote
-status: draft
+status: review
 last_reviewed: 2026-06-24
 primary_cta: [quote]
 ---
 
-# Request a Quote — copy outline (Path B — lead form)
+# Request a Quote
 
-For large/variable/custom events. Fields + logic: [`docs/booking-paths.md`](../../docs/booking-paths.md),
-[`velo/backend/quoteRequests.jsw`](../../velo/backend/quoteRequests.jsw).
+Fields + logic: [`docs/booking-paths.md`](../../docs/booking-paths.md) ·
+[`velo/backend/quoteRequests.jsw`](../../velo/backend/quoteRequests.jsw) ·
+wiring: [`docs/runbooks/08-quote-form.md`](../../docs/runbooks/08-quote-form.md).
 
 ## Intro
-- TODO(copy): "Tell us about your event and we'll build a custom quote." Set expectation:
-  "We'll reply within `TODO(owner)` business hours."
+Tell us about your event and we'll build a custom quote — no obligation. The more you share, the
+more accurate your estimate. We typically reply within `TODO(owner)` business hours.
 
 ## Form
-- See booking-paths.md Path B for the full field list (event type, dates, location, guest count,
-  drink/milk preferences, custom menu, branding, setup constraints, budget, referral, contact).
-- No payment at this step — deposit comes later via invoice.
+Renders the Path B fields (see booking-paths.md): event type, date(s) & flexibility, venue/location,
+guest count, duration, drink preferences (hot/iced), milk & alt-milk needs, custom-menu ideas,
+branding add-ons, setup constraints, budget range, how you heard about us, and your contact details.
 
-## Confirmation state
-- TODO(copy): thank-you message + what to expect next.
+*No payment is taken here* — if we're a fit, we'll follow up with a quote and, once accepted, a
+deposit invoice (paid securely via Square).
+
+## Confirmation (shown after submit)
+**Thank you — your request is in!** We've received the details for your event and we'll be in touch
+within `TODO(owner)` business hours with a custom quote. Keep an eye on your inbox (and spam, just
+in case). In the meantime, follow along at [@honeyrootcoffeeco](https://www.instagram.com/honeyrootcoffeeco/).
