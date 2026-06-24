@@ -1,0 +1,37 @@
+/*
+ * quoteRequests.jsw — Path B (Custom Quote) backend web module   [SCAFFOLD / STUB]
+ *
+ * STATUS: Not implemented. Structural stub only — finalize after IA + plan review.
+ *
+ * Page:        /quote
+ * Collection:  QuoteRequests (create in Wix Content Manager; schema in TODO below)
+ * Secrets:     owner notification target via Wix Secrets Manager (no secrets in repo)
+ * Related:     docs/booking-paths.md (field list), docs/architecture.md (Notion mirror)
+ *
+ * Responsibilities (to build):
+ *   1. Validate the submitted quote payload (server-side; mirror public/validation.js).
+ *   2. Insert into the QuoteRequests collection.
+ *   3. Notify the owner (Wix Automations/Triggered Email, or email via backend).
+ *   4. (Optional) Mirror the request into Notion / place a calendar hold.
+ *   5. Return a result the page can turn into a clean "thanks, we'll reply in X hrs" state.
+ *
+ * NO payment is taken here. Deposit is collected later via Wix Invoice → Square.
+ */
+
+// import wixData from 'wix-data';
+
+/**
+ * TODO(velo): QuoteRequest payload shape (keep in sync with docs/booking-paths.md → Path B):
+ *   eventType, eventDates, dateFlexible, venueLocation, guestCount, duration,
+ *   drinkPreferences[], milkOptions[], customMenuNotes, branding[], setupConstraints,
+ *   budgetRange, referralSource, contact:{name,email,phone,company}, consent
+ */
+
+export async function submitQuoteRequest(payload) {
+  // TODO(velo): validate(payload)
+  // TODO(velo): const saved = await wixData.insert('QuoteRequests', payload);
+  // TODO(velo): await notifyOwner(saved);
+  // TODO(velo): optional: await mirrorToNotion(saved);
+  // return { ok: true, id: saved._id };
+  throw new Error('quoteRequests.submitQuoteRequest not implemented — scaffold only');
+}

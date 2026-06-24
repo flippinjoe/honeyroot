@@ -1,0 +1,39 @@
+{
+  "$comment": "Structured drink menu that drives the Menus page (services 3,4,5,6). Prices optional — many events are package-priced; per-drink price only if relevant. TODO(owner) to confirm real offerings.",
+  "schema": {
+    "category": "string — display group, e.g. 'Espresso Classics'",
+    "items[].name": "string",
+    "items[].description": "string",
+    "items[].temps": "array — any of ['hot','iced']",
+    "items[].tags": "array — e.g. ['signature','seasonal','caffeine-free']"
+  },
+  "milkOptions": ["Whole", "2%", "Oat", "Almond", "TODO(owner): confirm full list (soy? lactose-free?)"],
+  "categories": [
+    {
+      "category": "Espresso Classics",
+      "items": [
+        { "name": "Latte", "description": "TODO(copy)", "temps": ["hot", "iced"], "tags": [] },
+        { "name": "Cappuccino", "description": "TODO(copy)", "temps": ["hot"], "tags": [] },
+        { "name": "Americano", "description": "TODO(copy)", "temps": ["hot", "iced"], "tags": [] },
+        { "name": "Mocha", "description": "TODO(copy)", "temps": ["hot", "iced"], "tags": [] },
+        { "name": "Cortado", "description": "TODO(copy)", "temps": ["hot"], "tags": [] }
+      ]
+    },
+    {
+      "category": "Signature & Seasonal",
+      "items": [
+        { "name": "Honey Root Signature", "description": "TODO(copy): a house signature drink", "temps": ["hot", "iced"], "tags": ["signature"] },
+        { "name": "TODO(owner): seasonal drink", "description": "TODO(copy)", "temps": ["iced"], "tags": ["seasonal"] }
+      ]
+    },
+    {
+      "category": "Non-Espresso & Caffeine-Free",
+      "items": [
+        { "name": "Hot Chocolate", "description": "TODO(copy)", "temps": ["hot"], "tags": ["caffeine-free"] },
+        { "name": "Chai Latte", "description": "TODO(copy)", "temps": ["hot", "iced"], "tags": [] },
+        { "name": "Matcha Latte", "description": "TODO(copy)", "temps": ["hot", "iced"], "tags": [] },
+        { "name": "Tea", "description": "TODO(copy)", "temps": ["hot"], "tags": ["caffeine-free"] }
+      ]
+    }
+  ]
+}

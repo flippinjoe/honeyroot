@@ -1,0 +1,34 @@
+{
+  "$comment": "Index of brand assets. Source of truth for 'what imagery/branding exists and where'. Fill TODO(owner) as assets are finalized. Large originals live off-repo (Drive/Canva) and are referenced by 'location'.",
+  "brand": {
+    "logo": {
+      "primary": "TODO(owner): assets/brand/logo.svg",
+      "variants": ["TODO(owner): mono, stacked, icon-only"],
+      "location": "TODO(owner): Canva / Drive link"
+    },
+    "palette": {
+      "$note": "Pull from the Instagram aesthetic — warm honey/amber + grounded earth neutrals. Keep to ~4.",
+      "primary": "TODO(owner): #",
+      "secondary": "TODO(owner): #",
+      "accent": "TODO(owner): #",
+      "neutral": "TODO(owner): #"
+    },
+    "fonts": {
+      "display": "TODO(owner)",
+      "body": "TODO(owner)",
+      "$rule": "Two fonts max."
+    }
+  },
+  "photography": {
+    "hero": ["TODO(owner): bar-at-event hero shots"],
+    "services": ["TODO(owner): setup, baristas, branding examples"],
+    "menu": ["TODO(owner): drink close-ups (hot & iced)"],
+    "gallery": ["TODO(owner): curated event set"],
+    "location": "TODO(owner): Drive/Canva link to originals (not committed)"
+  },
+  "social": {
+    "instagram_handle": "@honeyrootcoffeeco",
+    "templates": ["TODO(owner): Canva templates for posts, menu cards, flyers"],
+    "fallback_grid": ["TODO(owner): static images used if the IG feed widget fails (runbook 07)"]
+  }
+}

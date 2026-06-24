@@ -1,0 +1,77 @@
+{
+  "$comment": "The 9 services as structured data. Drives the Services page and the service-to-page mapping. status: draft until copy review. TODO(copy) on blurbs.",
+  "services": [
+    {
+      "id": "mobile-espresso-bar",
+      "name": "Mobile Espresso Bar",
+      "short": "A full espresso bar that comes to your event.",
+      "blurb": "TODO(copy): the signature offering — we bring a beautiful, fully-equipped espresso bar to your venue.",
+      "primaryPage": "home+services",
+      "cta": "quote"
+    },
+    {
+      "id": "professional-barista-service",
+      "name": "Professional Barista Service",
+      "short": "Trained, friendly baristas running the bar.",
+      "blurb": "TODO(copy): skilled baristas who craft each drink and elevate the guest interaction.",
+      "primaryPage": "services",
+      "cta": "quote"
+    },
+    {
+      "id": "handcrafted-espresso-beverages",
+      "name": "Handcrafted Espresso Beverages",
+      "short": "Espresso classics, made to order.",
+      "blurb": "TODO(copy): lattes, cappuccinos, americanos, mochas and more — handcrafted on site.",
+      "primaryPage": "menus",
+      "cta": "book"
+    },
+    {
+      "id": "hot-and-iced",
+      "name": "Hot & Iced Drink Options",
+      "short": "Whatever the weather, whatever the crowd.",
+      "blurb": "TODO(copy): full hot and iced menus so every guest gets their drink their way.",
+      "primaryPage": "menus",
+      "cta": "book"
+    },
+    {
+      "id": "milk-and-alt-milk",
+      "name": "Milk & Alternative Milk Options",
+      "short": "Whole, oat, almond, and more.",
+      "blurb": "TODO(copy): inclusive options for every guest, including dairy-free.",
+      "primaryPage": "menus",
+      "cta": "quote"
+    },
+    {
+      "id": "custom-drink-menus",
+      "name": "Custom Drink Menus",
+      "short": "A menu designed around your event.",
+      "blurb": "TODO(copy): signature drinks and themed menus tailored to your occasion or brand.",
+      "primaryPage": "menus+quote",
+      "cta": "quote"
+    },
+    {
+      "id": "setup-and-breakdown",
+      "name": "Setup & Breakdown",
+      "short": "We handle the logistics, start to finish.",
+      "blurb": "TODO(copy): full setup and teardown so you never lift a thing.",
+      "primaryPage": "services",
+      "cta": "quote"
+    },
+    {
+      "id": "elevated-guest-experience",
+      "name": "Elevated Guest Experience",
+      "short": "More than coffee — a moment.",
+      "blurb": "TODO(copy): a warm, memorable touchpoint that elevates your event.",
+      "primaryPage": "home+services",
+      "cta": "quote"
+    },
+    {
+      "id": "personalized-event-branding",
+      "name": "Personalized Event Branding",
+      "short": "Branded cups, signage, and bar.",
+      "blurb": "TODO(copy): custom cups, signage, and a branded bar that match your event's look.",
+      "primaryPage": "services+quote",
+      "cta": "quote"
+    }
+  ]
+}

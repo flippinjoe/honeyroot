@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Velo / Wix local tooling
+.wix/
+wix.config.json.local
+.local/
+
+# Environment & secrets — NEVER commit Square/Wix API keys, tokens, or secrets
+.env
+.env.*
+*.local
+secrets/
+*.key
+*.pem
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Build / logs
+dist/
+build/
+*.log
+npm-debug.log*
+
+# Large/binary source assets are tracked via assets/manifest.json, not committed raw.
+# Uncomment if originals live here and you want them ignored:
+# assets/originals/
