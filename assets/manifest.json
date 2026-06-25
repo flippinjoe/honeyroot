@@ -7,17 +7,24 @@
       "location": "TODO(owner): Canva / Drive link"
     },
     "palette": {
-      "$note": "Pull from the Instagram aesthetic — warm honey/amber + grounded earth neutrals. Keep to ~4.",
-      "primary": "TODO(owner): #",
-      "secondary": "TODO(owner): #",
-      "accent": "TODO(owner): #",
-      "neutral": "TODO(owner): #"
+      "$note": "Pulled from the Canva site (honeyrootcoffeeco.my.canva.site). Warm cream on a deep oxblood base, with slate-blue and sage as supporting tones. Keep to ~4 in use.",
+      "primary": "#620000",
+      "secondary": "#304254",
+      "accent": "#c0bd90",
+      "neutral": "#fff2e9",
+      "$alternates": {
+        "slateMuted": "#4e6d93",
+        "offWhite": "#fcf5f5"
+      }
     },
     "fonts": {
-      "display": "TODO(owner)",
-      "body": "TODO(owner)",
+      "$note": "Match the Canva site. Display = the 'honeyroot' wordmark face (rounded/elegant); body = a clean humanist sans. Exact families TODO(owner) — read them off the Canva editor's text styles.",
+      "display": "TODO(owner): confirm from Canva",
+      "body": "TODO(owner): confirm from Canva",
       "$rule": "Two fonts max."
-    }
+    },
+    "tagline": "Your space, elevated.",
+    "positioning": "A fully mobile espresso experience designed to elevate events through handcrafted drinks and genuine connection."
   },
   "photography": {
     "hero": ["TODO(owner): bar-at-event hero shots"],
@@ -25,6 +32,11 @@
     "menu": ["TODO(owner): drink close-ups (hot & iced)"],
     "gallery": ["TODO(owner): curated event set"],
     "location": "TODO(owner): Drive/Canva link to originals (not committed)"
+  },
+  "contact": {
+    "email": "honeyrootcoffeeco@gmail.com",
+    "phone": "(240) 818-8099",
+    "$note": "Confirmed from the Canva site and applied to Wix Business Info (site properties) on 2026-06-25."
   },
   "social": {
     "instagram_handle": "@honeyrootcoffeeco",

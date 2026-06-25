@@ -20,6 +20,15 @@ Live status. Update as work completes. `✅ done · 🔵 in progress · ⬜ todo
 - [ ] 👤 Brand kit (palette/fonts/logo) → `assets/manifest.json`
 - [ ] ⬜ Notion project tracker + content calendar
 
+## Canva alignment pass (2026-06-25)
+- [x] ✅ Extracted design from `honeyrootcoffeeco.my.canva.site` (palette, copy, packages, contact)
+- [x] ✅ Applied to live Wix via API: business email + phone, business description
+- [x] ✅ Applied to live Wix via API: 3 Bookings services renamed to Canva offerings (hidden; price TODO)
+- [x] ✅ Repo: palette + contact in `assets/manifest.json`; Canva copy in `home`/`contact`; `serviceModels` in `packages.json`
+- [x] ✅ Runbook `09-canva-visual-restyle.md` (editor steps for theme/fonts/layout + finishing services)
+- [ ] 👤 In Wix Editor: apply palette/fonts/section order (runbook 09); fill font names in manifest
+- [ ] 👤 Set service prices + photos, then unhide the 3 services (runbook 09 step 4)
+
 ## Phase 1 — Brochure + Quote
 - [x] ✅ Draft Phase-1 copy (`content/pages/*`, status: review) — owner facts marked `TODO(owner)`
 - [x] ✅ Drink-menu data classics + service data filled (`content/menus`, `content/services`)

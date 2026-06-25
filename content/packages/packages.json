@@ -43,5 +43,34 @@
   "routing": {
     "$note": "Above the largest guestMax, or for multi-bar / heavy customization / out-of-area, send to the custom quote.",
     "quoteAboveGuests": 150
+  },
+  "serviceModels": {
+    "$comment": "The three headline service FORMATS shown on the Canva site (honeyrootcoffeeco.my.canva.site). These describe HOW the bar is run, while `packages` above are the self-serve SIZE TIERS (Path A). These three were applied to Wix Bookings as services on 2026-06-25 (currently hidden — owner sets price/duration then unhides; see runbook 09). Prices remain TODO(owner).",
+    "models": [
+      {
+        "id": "full-service-espresso-bar",
+        "name": "Full Service Espresso Bar",
+        "wixServiceId": "10c7ee4e-e81f-48f6-b85f-11e12d7f3c05",
+        "tagline": "Unlimited handcrafted drinks, fully hosted by you.",
+        "description": "Treat your guests to an elevated coffee experience with unlimited handcrafted espresso beverages served throughout your event. We'll handle everything from set up to breakdown allowing your guests to enjoy complimentary drinks without ever reaching for their wallet.",
+        "price": "TODO(owner)"
+      },
+      {
+        "id": "hosted-pop-up-bar",
+        "name": "Hosted Pop-Up Bar",
+        "wixServiceId": "4031700b-bcb3-41bd-abfb-3c324e723b2e",
+        "tagline": "A full cafe experience brought directly to your space.",
+        "description": "We'll provide the full Honeyroot experience while guests purchase drinks individually. Perfect for community events, fitness studios, markets, grand openings, and workplaces looking to offer specialty coffee and connection.",
+        "price": "TODO(owner)"
+      },
+      {
+        "id": "custom-bottled-latte-service",
+        "name": "Custom Bottled Latte Service",
+        "wixServiceId": "a1aa987d-5d6d-451a-bdc9-3c69dfc11ff3",
+        "tagline": "Freshly bottled, ready when you are.",
+        "description": "Enjoy Honeyroot's handcrafted espresso beverages in a convenient grab-and-go format. Choose from our signature flavors and milk options, then let us handle the preparation. Perfect for gifting, welcome bags, meetings, retreats, and any special celebration.",
+        "price": "TODO(owner)"
+      }
+    ]
   }
 }

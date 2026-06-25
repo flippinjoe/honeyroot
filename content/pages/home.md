@@ -2,7 +2,7 @@
 page: Home
 route: /
 status: review
-last_reviewed: 2026-06-24
+last_reviewed: 2026-06-25
 primary_cta: [book, quote]
 ---
 
@@ -12,11 +12,13 @@ primary_cta: [book, quote]
 > Business facts still pending the owner are marked `TODO(owner)`.
 
 ## Hero
-**Headline:** Espresso, beautifully served — wherever you celebrate.
+**Headline:** Your space, elevated.
+*(From the Canva site. Alternate, descriptive option: "Espresso, beautifully served — wherever you celebrate.")*
 
-**Subhead:** Honey Root Coffee Co. brings a full mobile espresso bar and professional baristas to
-weddings, corporate events, and private parties. Handcrafted drinks, elevated hospitality, and a
-setup that runs itself — so you can enjoy your event.
+**Subhead:** A fully mobile espresso experience designed to elevate events through handcrafted drinks
+and genuine connection. Honey Root Coffee Co. brings a full mobile espresso bar and professional
+baristas to weddings, corporate events, and private parties — handcrafted drinks, elevated
+hospitality, and a setup that runs itself, so you can enjoy your event.
 
 **Primary CTAs:** `Book an event` · `Request a quote`
 
@@ -27,6 +29,15 @@ setup that runs itself — so you can enjoy your event.
 - **Professional baristas.** Skilled, friendly, and dialed in on every drink.
 - **Custom drink menus.** Espresso classics plus signatures designed around your event.
 - **Setup & breakdown.** We handle the logistics from load-in to load-out.
+
+## What we stand for
+*(Brand-values trio from the Canva site.)*
+- **Quality Ingredients.** Thoughtfully sourced, so you taste the difference in every sip.
+- **Intentional Service.** Every detail chosen with care, from set up to breakdown.
+- **Memorable Experiences.** More than coffee — a warm moment your guests remember.
+
+> We believe great coffee starts with quality ingredients. From thoughtfully sourced ingredients to
+> intentional preparation, every detail is chosen with care so you can taste the difference in every sip.
 
 ## How it works
 1. **Tell us about your event.** Share the date, place, and headcount — book instantly or request a quote.

@@ -2,7 +2,7 @@
 page: Contact
 route: /contact
 status: review
-last_reviewed: 2026-06-24
+last_reviewed: 2026-06-25
 primary_cta: [quote, book]
 ---
 
@@ -13,8 +13,8 @@ The fastest way to get a date on the calendar is to `Book an event` (standard pa
 `Request a quote` (larger or custom events). Prefer to reach us directly? Use the details below.
 
 ## Reach us
-- **Email:** `TODO(owner)`
-- **Phone:** `TODO(owner)`
+- **Email:** [honeyrootcoffeeco@gmail.com](mailto:honeyrootcoffeeco@gmail.com)
+- **Phone:** [(240) 818-8099](tel:+12408188099)
 - **Service area:** `TODO(owner)` and surrounding area
 - **Instagram:** [@honeyrootcoffeeco](https://www.instagram.com/honeyrootcoffeeco/)
 
