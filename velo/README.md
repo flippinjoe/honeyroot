@@ -63,6 +63,30 @@ context. (Owner email is sent by a Wix Automation on new items — config, not c
 | `status` | Text | set to `new` on insert; owner updates (quoted/won/lost) |
 | `submittedAt` | Date and Time | set on insert |
 
+## `Reviews` collection schema
+
+Backs the **Reviews** page ([`content/pages/reviews.md`](../content/pages/reviews.md)) via a Wix
+Content Manager collection + a repeater (no paid app required). Permissions: **public read**,
+admin write (reviews are public testimonials; only the owner adds them). Wix auto-adds
+`_id`, `_createdDate`, `_updatedDate`, `_owner`.
+
+| Field key | Type | Notes |
+| --- | --- | --- |
+| `reviewerName` | Text | required; display name, e.g. "Sarah M." |
+| `rating` | Number | 1–5 stars |
+| `quote` | Text | the review text (multiline) |
+| `eventType` | Text | wedding / corporate / private / activation / pop-up / other |
+| `eventDate` | Date and Time | when the event happened (optional) |
+| `location` | Text | city / venue (optional) |
+| `photo` | Image | optional headshot or event photo |
+| `source` | Text | client / google / instagram / referral (attribution) |
+| `featured` | Boolean | show in the featured slot at the top |
+| `displayOrder` | Number | manual sort (lower = first) |
+
+> **All reviews must be real** (owner-supplied or imported from Google/clients). Never seed fabricated
+> testimonials. Create the collection in the Content Manager (or via the Wix Data API) — see
+> [runbook 10](../docs/runbooks/10-content-pages.md).
+
 ## Conventions
 
 - Each file's header comment states the **page**, the **Wix element IDs**, and the **collections**

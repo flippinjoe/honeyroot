@@ -1,7 +1,11 @@
-# Runbook 10 — Add the About, Instagram, Reviews, and Shop Pages
+# Runbook 10 — Add the About, Instagram, and Reviews Pages
 
-**Audience:** owner / site admin. **Phase:** 1–3. **Goal:** add four pages to the live Wix site:
-**About**, **Instagram**, **Reviews**, and **Shop** (standard purchases via Square).
+**Audience:** owner / site admin. **Phase:** 1–3. **Goal:** add three pages to the live Wix site:
+**About**, **Instagram**, and **Reviews**.
+
+> **No Shop page.** Native Wix Stores checkout requires a Premium plan, which we're not adopting. If
+> you want to sell gift cards/merch, the free option is a **"Shop on Square" link in the footer** to
+> your Square Online store (keeps every sale in Square) — see §4.
 
 > **Why a runbook:** pages, their layout, and their place in the site menu are built in the **Wix
 > Editor** — the API can't create editor pages. Each page's copy lives in `content/pages/` (the
@@ -10,9 +14,9 @@
 
 ## 0. Add the pages and menu (do once)
 1. In the **Wix Editor**, open the **Pages** panel (**Menus & Pages**).
-2. Add four blank pages: **About**, **Instagram**, **Reviews**, **Shop**.
+2. Add three blank pages: **About**, **Instagram**, **Reviews**.
 3. Keep the top nav to ~5 items (cleanliness): **Home · Services · Menus · Gallery · About**.
-   Put **Reviews**, **Instagram**, and **Shop** in the **header overflow ("More")** or the **footer**
+   Put **Reviews** and **Instagram** in the **header overflow ("More")** or the **footer**
    so the bar stays uncluttered (matches [`docs/site-map.md`](../site-map.md)).
 
 ---
@@ -30,37 +34,38 @@
 3. Lazy-load below the fold; add a static fallback grid in case the feed fails.
 
 ## 3. Reviews  →  copy in [`content/pages/reviews.md`](../../content/pages/reviews.md)
-1. From the **Wix App Market**, add a reviews app. Recommended: the official **Wix Reviews** app
-   (published by Wix). If you prefer to show reviews you already have on Google, a Google-reviews
-   widget is a fine alternative.
-   - *Note:* I didn't auto-install this via the API — several similarly named third-party apps exist,
-     and picking the right one (and any billing) is safest from the editor where you can see the
-     publisher. Add it there.
-2. Configure an overall rating + a grid/carousel of individual reviews.
-3. `TODO(owner)`: add 6–12 **real** reviews (clients, Google, DMs). Never use invented testimonials.
-4. Optionally add a "write a review" prompt so happy clients can add more after their event.
-5. **Fallback without an app:** if you'd rather not add an app, ask and I'll scaffold a **Reviews CMS
-   collection** (author, rating, quote, event type, date) and you bind a repeater to it.
+Free, no app: a **`Reviews` CMS collection** + a repeater. Schema is in
+[`velo/README.md`](../../velo/README.md).
+1. **Create the collection** (one-time). In **Content Manager → Create Collection**, name it
+   **Reviews**, set permissions to **public read / admin write**, and add the fields from the schema:
+   `reviewerName` (Text), `rating` (Number), `quote` (Text), `eventType` (Text), `eventDate` (Date),
+   `location` (Text), `photo` (Image), `source` (Text), `featured` (Boolean), `displayOrder` (Number).
+   *(This can also be created via the Wix Data API — ask and I'll run it once the Wix connection is
+   approved.)*
+2. **Add the page UI:** drop a **Repeater** on the Reviews page and connect it to the Reviews
+   collection via a **Dataset**. Bind: stars←`rating`, text←`quote`, name←`reviewerName`,
+   tag←`eventType`, image←`photo`. Sort by `displayOrder` (and/or filter `featured` for a top slot).
+3. `TODO(owner)`: add 6–12 **real** reviews as collection items (clients, Google, DMs). Never use
+   invented testimonials.
+4. Optionally add a Wix **Form** that writes to the collection so clients can submit a review.
 
-## 4. Shop (standard purchases → Square)  →  copy in [`content/pages/shop.md`](../../content/pages/shop.md)
-Decision on record: purchases link out to **Square Online** (keeps every sale in Square, your single
-processor — no second checkout, no duplicate inventory).
-1. Build a short page: intro + the small list of online items (gift cards, prepaid, merch) from the
-   content file.
-2. Add a primary button **"Shop on Square"** linking to your Square Online store.
-   - `TODO(owner)`: paste your **Square Online store URL** (Square Dashboard → Online → your site).
-   - Set the button link to **open in a new tab**.
-3. Keep it minimal so it never competes with **Book / Request a Quote**.
+## 4. Purchases (optional, free — no Shop page)
+There's intentionally no Shop page (a native cart needs Premium). If you want to sell gift
+cards/merch at no cost, link out to your existing **Square Online** store:
+1. In the **footer** (or About page), add a small text link/button **"Gift cards / Shop on Square"**.
+2. Link it to your **Square Online store URL** (`TODO(owner)`: Square Dashboard → Online → your site),
+   set to **open in a new tab**.
+3. That's it — all sales, receipts, and inventory stay in Square; no Wix plan upgrade.
 
-> If you ever want a native on-site cart instead of a link, that's a **Wix Stores** project (still
-> paid via Square as the Wix payment provider) — say the word and we'll scope it.
+> If you ever adopt a Premium plan and want a native on-site cart, that's a **Wix Stores** project
+> (still paid via Square as the Wix payment provider) — say the word and we'll scope it.
 
 ---
 
 ## ✅ Verify it worked (on a phone)
-- [ ] All four pages exist and are reachable (nav for About; overflow/footer for the others).
+- [ ] All three pages exist and are reachable (nav for About; overflow/footer for Reviews + Instagram).
 - [ ] **About** has the real story/team (no placeholder text).
 - [ ] **Instagram** shows the live @honeyrootcoffeeco feed with a Follow button + fallback.
-- [ ] **Reviews** shows real reviews via the chosen app; no invented quotes.
-- [ ] **Shop** "Shop on Square" button opens the Square store in a new tab.
+- [ ] **Reviews** shows real reviews from the `Reviews` collection; no invented quotes.
+- [ ] (Optional) a free **"Shop on Square"** footer link opens the Square store in a new tab.
 - [ ] Every page ends in a **Book** or **Request a Quote** CTA.

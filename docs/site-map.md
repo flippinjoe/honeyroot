@@ -19,7 +19,8 @@ Home  |  Services  |  Menus  |  Gallery  |  About
 
 ## Footer (every page)
 
-- Quick links: Services · Menus · Book · Request a Quote · Reviews · Shop · Blog · About · Contact
+- Quick links: Services · Menus · Book · Request a Quote · Reviews · Instagram · Blog · About · Contact
+- Optional: a small **"Gift cards / Shop on Square"** footer link (free link-out; no Shop page)
 - Service area + booking lead-time note · Instagram handle/icon · email · phone
 - Legal: Privacy · Terms · Accessibility statement
 
@@ -85,21 +86,22 @@ Trust + brand.
 - Booking lead-time + FAQ accordion (deposits, travel, power/water needs, headcount limits).
 - Nudge toward Book / Quote rather than open-ended email where possible.
 
-### 10. Shop / Gift Cards `/shop`  *(Wix Stores — Phase 3, optional)*
-Only online-sellable items: **gift cards, prepaid packages, merch**. Mirrors Square (see
-[architecture.md](architecture.md)). Not a retail catalog — kept intentionally small.
+### 10. Shop / Gift Cards — **removed (no dedicated page)**
+Decision (2026-06-25): no Shop page. A native Wix Stores cart can't take payment on the Free plan
+(needs Premium), and the owner doesn't want a paid upgrade for this. If selling is wanted later, the
+free option is a **"Gift cards / Shop on Square" link in the footer** pointing to the existing Square
+Online store (keeps all sales in Square; no Premium, no second processor). A native on-site cart
+remains a future Wix Stores project only if a Premium plan is adopted.
 
 ### 11. Reviews `/reviews`
-Social proof as its own page (overflow/footer nav). Powered by the **Wix Reviews** app; real reviews
-only. Content: [`content/pages/reviews.md`](../content/pages/reviews.md). Build: [runbook 10](runbooks/10-content-pages.md).
+Social proof as its own page (overflow/footer nav). Driven by a free **`Reviews` CMS collection** +
+repeater (schema in [`velo/README.md`](../velo/README.md)); real reviews only. Content:
+[`content/pages/reviews.md`](../content/pages/reviews.md). Build: [runbook 10](runbooks/10-content-pages.md).
 
 ### 12. Instagram `/instagram`
 Dedicated live **@honeyrootcoffeeco** feed page (overflow/footer nav), complementing the Gallery
 strip. Content: [`content/pages/instagram.md`](../content/pages/instagram.md). Build:
 [runbook 07](runbooks/07-instagram-feed.md) + [runbook 10](runbooks/10-content-pages.md).
-
-> **Shop `/shop`** (item 10 above) is built as a **link out to Square Online** — no on-site cart —
-> to keep all sales in Square. Content: [`content/pages/shop.md`](../content/pages/shop.md).
 
 ### Utility / system pages
 - **Thank-you / confirmation** pages for Book and Quote submissions.
