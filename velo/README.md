@@ -28,10 +28,22 @@ velo/
 ├── public/       ← shared client-side modules
 │   ├── validation.js       validateQuotePayload() shared by client + backend
 │   └── packages.js         booking packages + recommendPackage() (guest-count routing)
+│   └── reviews.jsw         submitReview(): validate → insert Reviews as approved:false (moderated)
+├── public/
+│   └── reviewValidation.js validateReviewPayload() shared by client + backend
 └── pages/        ← per-page client code (bind to Wix element IDs)
     ├── quote.page.js       wires the /quote form elements to the backend
-    └── book.page.js        /book "which package?" helper → recommend or route to /quote
+    ├── book.page.js        /book "which package?" helper → recommend or route to /quote
+    └── reviews.page.js     wires the optional /reviews "leave a review" form to the backend
 ```
+
+## Reviews submission flow (optional "leave a review" form)
+
+`reviews.page.js` → `backend/reviews.jsw` → inserts into the `Reviews` collection with
+**`approved: false`** so submissions are **hidden until the owner approves** them in the Content
+Manager. The public reviews **Repeater/Dataset must filter `approved = true`** (editor config). The
+insert uses `{ suppressAuth: true }` so public visitors can submit into the admin-write collection.
+Element IDs the editor form must match are listed in `pages/reviews.page.js`.
 
 ## `QuoteRequests` collection schema
 
@@ -85,6 +97,7 @@ admin write (reviews are public testimonials; only the owner adds them). Wix aut
 | `source` | Text | client / google / instagram / referral (attribution) |
 | `featured` | Boolean | show in the featured slot at the top |
 | `displayOrder` | Number | manual sort (lower = first) |
+| `approved` | Boolean | **moderation gate** — only `true` items show on the page; client submissions insert as `false` |
 
 > **All reviews must be real** (owner-supplied or imported from Google/clients). Never seed fabricated
 > testimonials. Create the collection in the Content Manager (or via the Wix Data API) — see

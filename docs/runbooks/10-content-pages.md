@@ -39,14 +39,19 @@ Free, no app: a **`Reviews` CMS collection** + a repeater. Schema is in
 1. **Collection — already created (2026-06-25).** The **Reviews** collection exists on the site
    (created via the Wix Data API; the free Wix CMS app was installed to enable it). Permissions are
    **public read / admin write**, with fields: `reviewerName`, `rating`, `quote`, `eventType`,
-   `eventDate`, `location`, `photo` (Media Image), `source`, `featured`, `displayOrder`. Just open
-   **Content Manager → Reviews** to confirm and start adding items.
-2. **Add the page UI:** drop a **Repeater** on the Reviews page and connect it to the Reviews
-   collection via a **Dataset**. Bind: stars←`rating`, text←`quote`, name←`reviewerName`,
+   `eventDate`, `location`, `photo` (Media Image), `source`, `featured`, `displayOrder`, and
+   **`approved`** (moderation). Open **Content Manager → Reviews** to confirm and add items.
+2. **Add the page UI:** drop a **Repeater** on the Reviews page, connect it to the Reviews
+   collection via a read-only **Dataset**, and **filter the dataset to `approved` = true** (so only
+   approved reviews ever show). Bind: stars←`rating`, text←`quote`, name←`reviewerName`,
    tag←`eventType`, image←`photo`. Sort by `displayOrder` (and/or filter `featured` for a top slot).
-3. `TODO(owner)`: add 6–12 **real** reviews as collection items (clients, Google, DMs). Never use
-   invented testimonials.
-4. Optionally add a Wix **Form** that writes to the collection so clients can submit a review.
+3. `TODO(owner)`: add 6–12 **real** reviews as collection items (clients, Google, DMs) and set their
+   `approved` to true. Never use invented testimonials.
+4. **Optional "leave a review" form (already coded in Velo).** Build the form fields on the page
+   (IDs listed in [`velo/pages/reviews.page.js`](../../velo/pages/reviews.page.js)) and paste the
+   Velo (`reviews.page.js` + `backend/reviews.jsw` + `public/reviewValidation.js`). Submissions save
+   with **`approved: false`** — they stay hidden until you flip `approved` to true in Content Manager.
+   Requires **Dev Mode (Velo)** enabled on the site.
 
 ## 4. Purchases (optional, free — no Shop page)
 There's intentionally no Shop page (a native cart needs Premium). If you want to sell gift

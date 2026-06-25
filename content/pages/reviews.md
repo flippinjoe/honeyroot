@@ -29,8 +29,10 @@ collection. Aim for 6–12 strong ones to launch.
 `TODO(owner)`: pull one standout line to feature large at the top (real quote only).
 
 ## Leave a review
-`TODO(owner)`: optionally add a short form (Wix Forms) that writes to the `Reviews` collection (or
-collect via email/Google) so happy clients can add one after their event.
+An optional on-page form lets happy clients submit a review (name, rating, quote). It's powered by
+Velo (`velo/pages/reviews.page.js` → `velo/backend/reviews.jsw`) and is **moderated**: submissions
+save with `approved: false` and stay hidden until you approve them in the Content Manager. Build the
+form fields + paste the Velo per [runbook 10](../../docs/runbooks/10-content-pages.md).
 
 ## CTA
 Ready for your own five-star moment? **`Request a quote`** or **`Book an event`**.

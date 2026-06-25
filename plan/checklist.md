@@ -35,7 +35,9 @@ Live status. Update as work completes. `✅ done · 🔵 in progress · ⬜ todo
 - [x] ✅ Page content drafted: `reviews.md`, `instagram.md` (about.md already existed)
 - [x] ✅ Decisions: Reviews → free **`Reviews` CMS collection** (schema in `velo/README.md`); **no Shop page** (native cart needs Premium); free Square footer link is the purchases option
 - [x] ✅ Runbook `10-content-pages.md` (editor build steps + nav placement) + site map updated
-- [x] ✅ Created the `Reviews` CMS collection live via Wix Data API (installed the free Wix CMS app; public read / admin write; 10 fields)
+- [x] ✅ Created the `Reviews` CMS collection live via Wix Data API (installed the free Wix CMS app; public read / admin write) + `approved` moderation field
+- [x] ✅ Velo "leave a review" flow written (`reviews.jsw`, `reviewValidation.js`, `reviews.page.js`) — moderated insert (approved:false)
+- [ ] 👤 Reviews page: bind repeater to collection filtered `approved=true`; (optional) build form + paste Velo (needs Dev Mode); add real reviews
 - [ ] 👤 Build the 3 pages in the Wix Editor + place in overflow/footer nav (runbook 10)
 - [ ] 👤 Provide: real About story/team, real reviews (collection items)
 - [ ] 👤 Add the Instagram Feed element from the App Market (runbook 10)

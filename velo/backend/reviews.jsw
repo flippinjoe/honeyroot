@@ -1,0 +1,61 @@
+/*
+ * reviews.jsw — "Submit a review" backend web module
+ *
+ * Page:        /reviews
+ * Collection:  Reviews  (schema in velo/README.md)
+ * Related:     docs/runbooks/10-content-pages.md (form wiring + moderation)
+ *
+ * Flow: validate (server-side, authoritative) → insert into Reviews as UNAPPROVED → return result.
+ * Moderation: inserted with `approved: false` so it does NOT show on the public page until the
+ * owner flips `approved` to true in the Content Manager. The Reviews collection is admin-write,
+ * so the insert runs with elevated permissions ({ suppressAuth: true }) to accept public
+ * submissions. No public read of unapproved items: the page repeater filters `approved = true`.
+ *
+ * NOTE: validate against the current Wix `wix-data` API via the Wix MCP before pasting into the
+ * live site (per the velo-code skill).
+ */
+
+import wixData from 'wix-data';
+import { validateReviewPayload } from 'public/reviewValidation.js';
+
+const COLLECTION = 'Reviews';
+
+/**
+ * Submit a review from the /reviews page.
+ * @param {Object} payload  { reviewerName, rating, quote, eventType?, location?, consent }
+ * @returns {Promise<{ok: boolean, id?: string, errors?: Object<string,string>}>}
+ */
+export async function submitReview(payload) {
+  const { valid, errors } = validateReviewPayload(payload);
+  if (!valid) {
+    return { ok: false, errors };
+  }
+
+  const record = sanitize(payload);
+  record.approved = false;     // owner-moderated; hidden until approved
+  record.featured = false;
+  record.source = 'website';
+
+  try {
+    const inserted = await wixData.insert(COLLECTION, record, { suppressAuth: true });
+    return { ok: true, id: inserted._id };
+  } catch (err) {
+    console.error('submitReview insert failed:', err);
+    return { ok: false, errors: { _form: 'Something went wrong submitting your review. Please try again, or email us directly.' } };
+  }
+}
+
+/** Coerce/trim the raw client payload into the collection's field shape. */
+function sanitize(p) {
+  return {
+    reviewerName: trim(p.reviewerName),
+    rating: Number(p.rating) || null,
+    quote: trim(p.quote),
+    eventType: trim(p.eventType),
+    location: trim(p.location)
+  };
+}
+
+function trim(v) {
+  return typeof v === 'string' ? v.trim() : '';
+}
