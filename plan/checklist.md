@@ -24,7 +24,8 @@ Live status. Update as work completes. `✅ done · 🔵 in progress · ⬜ todo
 - [x] ✅ Extracted design from `honeyrootcoffeeco.my.canva.site` (palette, copy, packages, contact)
 - [x] ✅ Applied to live Wix via API: business email + phone, business description
 - [x] ✅ Applied to live Wix via API: Bookings mixed model — Custom Bottled Latte = live bookable appointment (visible, online booking, NO_FEE, owner staff); 2 full-event bars hidden/quote-only
-- [ ] 👤 Bookings to finish: set staff working hours (no slots until then), price/photo, connect Square + Premium plan, confirm Booking page in nav (runbook 09 §4)
+- [x] ✅ Applied to live Wix via API: Business Owner working hours = every day 8am–5pm (booking calendar now shows slots)
+- [ ] 👤 Bookings to finish: service price/photo, connect Square + Premium plan, confirm Booking page in nav, link CTA buttons (runbook 09 §3a/§4)
 - [x] ✅ Repo: palette + contact in `assets/manifest.json`; Canva copy in `home`/`contact`; `serviceModels` in `packages.json`
 - [x] ✅ Runbook `09-canva-visual-restyle.md` (editor steps for theme/fonts/layout + finishing services)
 - [ ] 👤 In Wix Editor: apply palette/fonts/section order (runbook 09); fill font names in manifest

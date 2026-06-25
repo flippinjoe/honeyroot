@@ -85,18 +85,18 @@ does nothing. Buttons are editor elements (not API-settable), so link them by ha
    lattes"** button for the bookable service. Don't leave one ambiguous button.
 4. Prefer linking to **Pages** (so it's a clean internal link) over pasting the full web address when
    the editor offers the page in the list.
-5. **Reminder:** the bottled-latte booking calendar shows **no open slots** until you set the staff
-   member's working hours (see §4a).
+5. **Note:** the bottled-latte booking calendar now has availability — working hours are set to
+   every day 8:00 AM–5:00 PM (see §4a). Adjust in the dashboard if needed.
 
 ## 4. Finish Bookings (mixed model)
 The booking model is split (see [`content/packages/packages.json`](../../content/packages/packages.json)
 → `serviceModels`):
 
 ### 4a. Custom Bottled Latte Service — the online-bookable one (already live)
-This is set up as a visible Appointment with online booking on. To make it actually take bookings:
-1. **Set your availability.** In **Dashboard → Bookings → Staff** (or **Booking Calendar → Working
-   Hours**), give the *Business Owner* staff member working hours. **Until you do this, the booking
-   widget shows no open slots.** (Availability is intentionally left blank — I won't invent your hours.)
+This is set up as a visible Appointment with online booking on. Status:
+1. **Availability — DONE.** The *Business Owner* working hours are set to **every day, 8:00 AM–5:00 PM**
+   (America/Chicago) via the API, so the booking calendar now shows open slots. Adjust any day in
+   **Dashboard → Bookings → Staff / Working Hours** if those hours aren't right.
 2. **Set the price.** It's currently **no-fee** (book without paying). In **Dashboard → Booking
    Services**, open the service and enter a price, or keep it no-fee and settle on pickup/delivery.
    Taking the money *online* additionally needs steps 4c–4d.
@@ -125,7 +125,8 @@ reach the bookable service. Add it in the **Wix Editor** if it's missing.
 - [ ] Home page, on a **phone**, follows the Canva section order and uses the oxblood/cream palette.
 - [ ] Only two fonts appear site-wide, matching the Canva.
 - [ ] Footer/contact shows `honeyrootcoffeeco@gmail.com`, `(240) 818-8099`, and `@honeyrootcoffeeco`.
-- [ ] *Custom Bottled Latte Service* shows open time slots (working hours set), has a photo, and a price (or is intentionally no-fee).
+- [x] *Custom Bottled Latte Service* shows open time slots — working hours set to every day 8am–5pm.
+- [ ] *Custom Bottled Latte Service* has a photo, and a price (or is intentionally no-fee).
 - [ ] The two full-event bars route to the **Request a Quote** form.
 - [ ] Both CTAs (**Book an event**, **Request a quote**) are present and reachable from the hero.
 - [ ] `assets/manifest.json` `brand.fonts` has the real font names filled in.
