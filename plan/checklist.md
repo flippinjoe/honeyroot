@@ -15,7 +15,7 @@ Live status. Update as work completes. `✅ done · 🔵 in progress · ⬜ todo
 - [x] ✅ Runbooks drafted (01–07)
 - [x] ✅ Phased plan + this checklist
 - [ ] 🛑 **OWNER REVIEW of IA + plan — approve to build** ← we are here
-- [ ] 👤 Wix account + plan + domain (runbook 01)
+- [ ] 👤 Wix account + plan + domain (runbook 01); domain/email/cost choices in [runbook 11](../docs/runbooks/11-domain-email-and-costs.md) — Light plan + Square invoices is the low-cost path; Cloudflare domain + free email forwarding
 - [ ] 👤 Square connected as Wix payment provider (runbook 02)
 - [ ] 👤 Brand kit (palette/fonts/logo) → `assets/manifest.json`
 - [ ] ⬜ Notion project tracker + content calendar
