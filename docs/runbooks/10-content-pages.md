@@ -36,12 +36,11 @@
 ## 3. Reviews  →  copy in [`content/pages/reviews.md`](../../content/pages/reviews.md)
 Free, no app: a **`Reviews` CMS collection** + a repeater. Schema is in
 [`velo/README.md`](../../velo/README.md).
-1. **Create the collection** (one-time). In **Content Manager → Create Collection**, name it
-   **Reviews**, set permissions to **public read / admin write**, and add the fields from the schema:
-   `reviewerName` (Text), `rating` (Number), `quote` (Text), `eventType` (Text), `eventDate` (Date),
-   `location` (Text), `photo` (Image), `source` (Text), `featured` (Boolean), `displayOrder` (Number).
-   *(This can also be created via the Wix Data API — ask and I'll run it once the Wix connection is
-   approved.)*
+1. **Collection — already created (2026-06-25).** The **Reviews** collection exists on the site
+   (created via the Wix Data API; the free Wix CMS app was installed to enable it). Permissions are
+   **public read / admin write**, with fields: `reviewerName`, `rating`, `quote`, `eventType`,
+   `eventDate`, `location`, `photo` (Media Image), `source`, `featured`, `displayOrder`. Just open
+   **Content Manager → Reviews** to confirm and start adding items.
 2. **Add the page UI:** drop a **Repeater** on the Reviews page and connect it to the Reviews
    collection via a **Dataset**. Bind: stars←`rating`, text←`quote`, name←`reviewerName`,
    tag←`eventType`, image←`photo`. Sort by `displayOrder` (and/or filter `featured` for a top slot).

@@ -70,6 +70,9 @@ Content Manager collection + a repeater (no paid app required). Permissions: **p
 admin write (reviews are public testimonials; only the owner adds them). Wix auto-adds
 `_id`, `_createdDate`, `_updatedDate`, `_owner`.
 
+> ✅ **Live:** created on the site via the Wix Data API on 2026-06-25 (collection id `Reviews`,
+> read = ANYONE). The Wix CMS app was installed to enable it. Add review items in Content Manager.
+
 | Field key | Type | Notes |
 | --- | --- | --- |
 | `reviewerName` | Text | required; display name, e.g. "Sarah M." |
@@ -78,7 +81,7 @@ admin write (reviews are public testimonials; only the owner adds them). Wix aut
 | `eventType` | Text | wedding / corporate / private / activation / pop-up / other |
 | `eventDate` | Date and Time | when the event happened (optional) |
 | `location` | Text | city / venue (optional) |
-| `photo` | Image | optional headshot or event photo |
+| `photo` | Media Image (`MEDIA_IMAGE`) | optional headshot or event photo |
 | `source` | Text | client / google / instagram / referral (attribution) |
 | `featured` | Boolean | show in the featured slot at the top |
 | `displayOrder` | Number | manual sort (lower = first) |
