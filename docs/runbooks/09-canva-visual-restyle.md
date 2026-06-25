@@ -66,6 +66,28 @@ Rebuild the Home page to follow the Canva's single-scroll flow. Add/arrange sect
 > Keep it clean and mobile-first: lots of whitespace, one clear action per section, restrained color.
 > Preview on a phone before publishing.
 
+## 3a. Wire the CTA buttons (fixes "button does nothing")
+Buttons placed by the template/Canva import have **no link set** — that's why a "Book event" button
+does nothing. Buttons are editor elements (not API-settable), so link them by hand:
+
+1. In the **Wix Editor**, click the button → click the **Link** (🔗) icon → **Link to**.
+2. Choose the target and paste the address:
+
+   | Button | Link to | Address (base = `https://joerdnr19.wixsite.com/honey-root-coffee-co`) |
+   | --- | --- | --- |
+   | Book / order bottled lattes | the bookable service | `…/booking-calendar/custom-bottled-latte-service-1` |
+   | (or its detail page) | service page | `…/service-page/custom-bottled-latte-service-1` |
+   | **Book an event** (full-event bars) | Request-a-Quote form page | the `/quote` page ([runbook 08](08-quote-form.md)) |
+   | Request a quote | Request-a-Quote form page | the `/quote` page |
+
+3. **Recommended routing** (mixed model): since the two full-event bars are quote-only, point a
+   generic **"Book an event"** button at the **quote form**, and use a separate **"Order bottled
+   lattes"** button for the bookable service. Don't leave one ambiguous button.
+4. Prefer linking to **Pages** (so it's a clean internal link) over pasting the full web address when
+   the editor offers the page in the list.
+5. **Reminder:** the bottled-latte booking calendar shows **no open slots** until you set the staff
+   member's working hours (see §4a).
+
 ## 4. Finish Bookings (mixed model)
 The booking model is split (see [`content/packages/packages.json`](../../content/packages/packages.json)
 → `serviceModels`):
