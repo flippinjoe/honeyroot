@@ -31,6 +31,15 @@ Live status. Update as work completes. `✅ done · 🔵 in progress · ⬜ todo
 - [ ] 👤 In Wix Editor: apply palette/fonts/section order (runbook 09); fill font names in manifest
 - [ ] 👤 Set service prices + photos, then unhide the 3 services (runbook 09 step 4)
 
+## New pages requested (2026-06-25) — About / Instagram / Reviews / Shop
+- [x] ✅ Page content drafted: `reviews.md`, `shop.md`, `instagram.md` (about.md already existed)
+- [x] ✅ Decisions captured: Shop → link to **Square Online**; Reviews → **Wix Reviews** app
+- [x] ✅ Runbook `10-content-pages.md` (editor build steps + nav placement for all four)
+- [x] ✅ Site map updated (Reviews #11, Instagram #12, Shop = Square link)
+- [ ] 👤 Build the 4 pages in the Wix Editor + place in overflow/footer nav (runbook 10)
+- [ ] 👤 Provide: real About story/team, real reviews, Square Online store URL
+- [ ] 👤 Add the Wix Reviews app + Instagram Feed element from the App Market (runbook 10)
+
 ## Phase 1 — Brochure + Quote
 - [x] ✅ Draft Phase-1 copy (`content/pages/*`, status: review) — owner facts marked `TODO(owner)`
 - [x] ✅ Drink-menu data classics + service data filled (`content/menus`, `content/services`)
