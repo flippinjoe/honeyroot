@@ -14,8 +14,12 @@
 - **Business Info → Contact:** email `honeyrootcoffeeco@gmail.com`, phone `(240) 818-8099`.
 - **Business Info → Profile:** description = "A fully mobile espresso experience designed to elevate
   events through handcrafted drinks and genuine connection."
-- **Bookings services** renamed to the three Canva offerings (still **hidden** — see step 4):
-  Full Service Espresso Bar · Hosted Pop-Up Bar · Custom Bottled Latte Service.
+- **Bookings (mixed model, applied 2026-06-25):**
+  - **Custom Bottled Latte Service** → live, online-bookable **Appointment** (visible, online booking
+    on, 30-min slot, assigned to the *Business Owner* staff member, **NO_FEE** so no payment is
+    required to book). **No price** and **no availability** yet — see step 4.
+  - **Full Service Espresso Bar** and **Hosted Pop-Up Bar** → kept **hidden** (quote-only, Path B);
+    route these to the Request-a-Quote form ([runbook 08](08-quote-form.md)).
 
 Verify in **Dashboard → Settings → Business Info** and **Dashboard → Booking Services**.
 
@@ -62,29 +66,44 @@ Rebuild the Home page to follow the Canva's single-scroll flow. Add/arrange sect
 > Keep it clean and mobile-first: lots of whitespace, one clear action per section, restrained color.
 > Preview on a phone before publishing.
 
-## 4. Finish the three Bookings services and make them visible
-The three services exist and carry the Canva names/taglines/descriptions but are **hidden** and have
-**placeholder pricing**. For each (definitions in
-[`content/packages/packages.json`](../../content/packages/packages.json) → `serviceModels`):
+## 4. Finish Bookings (mixed model)
+The booking model is split (see [`content/packages/packages.json`](../../content/packages/packages.json)
+→ `serviceModels`):
 
-| Service | Tagline | Price / duration |
-| --- | --- | --- |
-| Full Service Espresso Bar | Unlimited handcrafted drinks, fully hosted by you. | `TODO(owner)` |
-| Hosted Pop-Up Bar | A full cafe experience brought directly to your space. | `TODO(owner)` |
-| Custom Bottled Latte Service | Freshly bottled, ready when you are. | `TODO(owner)` |
+### 4a. Custom Bottled Latte Service — the online-bookable one (already live)
+This is set up as a visible Appointment with online booking on. To make it actually take bookings:
+1. **Set your availability.** In **Dashboard → Bookings → Staff** (or **Booking Calendar → Working
+   Hours**), give the *Business Owner* staff member working hours. **Until you do this, the booking
+   widget shows no open slots.** (Availability is intentionally left blank — I won't invent your hours.)
+2. **Set the price.** It's currently **no-fee** (book without paying). In **Dashboard → Booking
+   Services**, open the service and enter a price, or keep it no-fee and settle on pickup/delivery.
+   Taking the money *online* additionally needs steps 4c–4d.
+3. **Adjust the slot length / location** if 30 minutes or the default location isn't right (e.g. set
+   pickup vs. delivery).
+4. **Add a photo** (the Canva images weren't in the export — re-upload from Canva/media library).
 
-1. In **Dashboard → Booking Services**, open each service.
-2. Enter the real **price** (or set "Price varies" / custom and route to the quote form for variable
-   events — see [runbook 08](08-quote-form.md)), and a sensible **duration**.
-3. Add a **photo** for each (the Canva images aren't in the export — re-upload from Canva or your
-   media library).
-4. Toggle the service from **hidden** to **visible** once price + photo are set.
-5. Confirm deposits route to **Square** (see [runbook 02](02-square-payment-provider.md)).
+### 4b. Full Service Espresso Bar & Hosted Pop-Up Bar — quote-only
+These are **hidden** on purpose (variable, full-event services fit a quote better than fixed slots).
+Point them at the Request-a-Quote form ([runbook 08](08-quote-form.md)). Only un-hide them as
+Bookings services later if you decide to offer fixed, online-bookable versions.
+
+### 4c. Connect Square (to collect deposits/payments)
+Bookings can't take money online until **Square is connected as the payment provider** —
+see [runbook 02](02-square-payment-provider.md).
+
+### 4d. Upgrade to a Premium plan
+The site is on the **Free** plan, which **cannot accept online payments**. A Wix **Premium** plan is
+required before any service (or deposit) can be paid online.
+
+### 4e. Confirm the Booking page is in the site menu
+Make sure a **Booking / Services page** exists and is linked in the site navigation, so visitors can
+reach the bookable service. Add it in the **Wix Editor** if it's missing.
 
 ## 5. Verify it worked
 - [ ] Home page, on a **phone**, follows the Canva section order and uses the oxblood/cream palette.
 - [ ] Only two fonts appear site-wide, matching the Canva.
 - [ ] Footer/contact shows `honeyrootcoffeeco@gmail.com`, `(240) 818-8099`, and `@honeyrootcoffeeco`.
-- [ ] The three services are visible, priced, and each has a photo.
+- [ ] *Custom Bottled Latte Service* shows open time slots (working hours set), has a photo, and a price (or is intentionally no-fee).
+- [ ] The two full-event bars route to the **Request a Quote** form.
 - [ ] Both CTAs (**Book an event**, **Request a quote**) are present and reachable from the hero.
 - [ ] `assets/manifest.json` `brand.fonts` has the real font names filled in.
